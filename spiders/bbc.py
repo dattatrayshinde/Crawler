@@ -15,8 +15,8 @@ class BbcSpider(CrawlSpider):
     )
     rules = (
         # Change rule as per the requirements otherwise it will take hours
-        Rule(LinkExtractor(allow=r'/news/[A-Za-z0-9]'), callback='parse_item', follow=True),
-        #Rule(LinkExtractor(allow=r'/news/[a-z]'), callback='parse_item', follow=True),
+        #Rule(LinkExtractor(allow=r'/news/[A-Za-z0-9]'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'/news/[a-z]'), callback='parse_item', follow=True),
     )
     
     def parse_item(self, response):

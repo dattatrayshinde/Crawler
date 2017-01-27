@@ -14,7 +14,7 @@ BOT_NAME = 'Crawler'
 SPIDER_MODULES = ['Crawler.spiders']
 NEWSPIDER_MODULE = 'Crawler.spiders'
 DOWNLOAD_DELAY = 2
-#CLOSESPIDER_PAGECOUNT = 10
+CLOSESPIDER_PAGECOUNT = 10
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'Crawler (+http://www.yourdomain.com)'
 
