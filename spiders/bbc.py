@@ -14,6 +14,7 @@ class BbcSpider(CrawlSpider):
         'http://www.bbc.com/',
     )
     rules = (
+        # Change rule as per the requirements otherwise it will take hours
         Rule(LinkExtractor(allow=r'/news/[A-Za-z0-9]'), callback='parse_item', follow=True),
         #Rule(LinkExtractor(allow=r'/news/[a-z]'), callback='parse_item', follow=True),
     )
@@ -21,6 +22,7 @@ class BbcSpider(CrawlSpider):
     def parse_item(self, response):
         hxs = HtmlXPathSelector(response)
         item = CrawlerItem()
+        #Use xpath or class selector
         #item['text'] = response.xpath('//*[@id="page"]/div[2]/div[2]/div/div[1]/div[1]/div[3]/p[1]//text()').extract()[0]
         item['text'] = hxs.select('//p[@class="story-body__introduction"]/text()').extract()
         item['author'] = "BBC News Media"
