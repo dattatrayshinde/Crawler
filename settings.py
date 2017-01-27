@@ -21,6 +21,12 @@ NEWSPIDER_MODULE = 'Crawler.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+ITEM_PIPELINES = {'Crawler.pipelines.CrawlerPipeline':300, }
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "BBCNewsArticles"
+MONGODB_COLLECTION = "Article"
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
