@@ -21,6 +21,7 @@ class CrawlerPipeline(object):
         self.collection = db[settings['MONGODB_COLLECTION']]
 
     def process_item(self, item, spider):
+        self.collection.remove({})
         valid = True
         for data in item:
             if not data:
