@@ -13,15 +13,23 @@ class CrawlerPipeline(object):
 
     def __init__(self):
         #configure the mongodb database to store data
+#==============================================================================
+#         connection = pymongo.MongoClient(
+#             settings['MONGODB_SERVER'],
+#             settings['MONGODB_PORT']
+#         )
+#==============================================================================
+#==============================================================================
         connection = pymongo.MongoClient(
-            settings['MONGODB_SERVER'],
-            settings['MONGODB_PORT']
+                                         settings['MONGODB_URI']
         )
+#==============================================================================
         db = connection[settings['MONGODB_DB']]
         self.collection = db[settings['MONGODB_COLLECTION']]
+        self.collection.remove({})
 
     def process_item(self, item, spider):
-        self.collection.remove({})
+        #self.collection.remove({})
         valid = True
         for data in item:
             if not data:

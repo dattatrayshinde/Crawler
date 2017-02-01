@@ -14,7 +14,7 @@ BOT_NAME = 'Crawler'
 SPIDER_MODULES = ['Crawler.spiders']
 NEWSPIDER_MODULE = 'Crawler.spiders'
 DOWNLOAD_DELAY = 2
-CLOSESPIDER_PAGECOUNT = 10
+CLOSESPIDER_PAGECOUNT = 3
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'Crawler (+http://www.yourdomain.com)'
 
@@ -22,10 +22,15 @@ CLOSESPIDER_PAGECOUNT = 10
 ROBOTSTXT_OBEY = True
 
 ITEM_PIPELINES = {'Crawler.pipelines.CrawlerPipeline':300, }
-MONGODB_SERVER = "localhost"
-MONGODB_PORT = 27017
+#==============================================================================
+# MONGODB_SERVER = "localhost"
+# MONGODB_PORT = 27017
+#==============================================================================
 MONGODB_DB = "BBCNewsArticles"
 MONGODB_COLLECTION = "Article"
+MONGODB_URI = 'mongodb://localhost:27017'
+#MONGODB_URI = 'mongodb://dsbdap@gmail.com:dsbdap@123@aws-us-east-1-portal.5.dblayer.com:16777,aws-us-east-1-portal.4.dblayer.com:16777/BBCNewsArticles?ssl=true
+
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
