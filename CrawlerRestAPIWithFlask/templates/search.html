@@ -1,0 +1,56 @@
+<!doctype html>
+	<head>
+	<title>search page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		/*var data = {{ res|tojson }};
+		var JSONObject = JSON.parse(data);
+		console.log(JSONObject.text);*/
+	</script>
+	</head>
+<body>
+<div class="container">
+
+	<div class="results">
+		<input id="searchterm" type="text" /> <button id="search">search</button>
+	</div>
+	<div class="results">
+		<pre>{{ res}}</pre>
+	</div>
+  <h2>Search Results</h2>
+  <p>Following is the result of your search -</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Headline</th>
+        <th>Author</th>
+        <th>Text</th>
+      </tr>
+    </thead>
+    <tbody>
+	
+	{% for text in res.text %}
+    <tr>
+        <td>
+            {{ text }}
+        </td>
+        <td>
+           {{ text }}
+        </td>
+		<td>
+           {{ text }}
+        </td>
+    </tr>
+    {% endfor %}
+	
+      
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

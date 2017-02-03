@@ -29,7 +29,7 @@ ITEM_PIPELINES = {'Crawler.pipelines.CrawlerPipeline':300, }
 MONGODB_DB = "BBCNewsArticles"
 MONGODB_COLLECTION = "Article"
 MONGODB_URI = 'mongodb://localhost:27017'
-#MONGODB_URI = 'mongodb://dsbdap@gmail.com:dsbdap@123@aws-us-east-1-portal.5.dblayer.com:16777,aws-us-east-1-portal.4.dblayer.com:16777/BBCNewsArticles?ssl=true
+#MONGODB_URI = 'mongodb://<u>:<p>@aws-us-east-1-portal.5.dblayer.com:16777,aws-us-east-1-portal.4.dblayer.com:16777/BBCNewsArticles?ssl=true
 
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
