@@ -39,13 +39,16 @@ python app.py
 Application if started without error will display following message -
 ![Home](https://github.com/dattatrayshinde/Crawler/blob/master/Screenshots/home.png)
 
-Function to get all Articles
+URL to get all Articles
+```python
 http://localhost:5000/Articles
-
+```
 ![All Articles](https://github.com/dattatrayshinde/Crawler/blob/master/Screenshots/GET%20ALL%20ARTICLES.png)
 
-Function to get srearch result for the specific query
+URL to get srearch result for the specific query
+```python
 http://localhost:5000/Articles/trump
+```
 
 ![Search Result for 'trump'](https://github.com/dattatrayshinde/Crawler/blob/master/Screenshots/Trump%20Search.png)
 
