@@ -18,7 +18,6 @@ def get_home():
 def get_all_articles():
     output = []
     for s in mydb.Article.find({}):  
-        print "abc"
         output.append({'text' : s['text'], 'author' : s['author'],'headline' : s['headline'],'url' : s['url']})
     return jsonify({'result' : output})
     #return render_template('search.html', res=jsonify({'result' : output}))
